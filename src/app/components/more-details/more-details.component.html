@@ -1,0 +1,11 @@
+<div>
+  <button mat-stroked-button (click)="moreDetails()">Details</button>
+  <div *ngIf="showDetails"> 
+    <div><h3>More Details</h3></div>
+    <div>Student Name: {{firstName}} {{lastName}}</div>
+    <div>Student GPA: {{studentGPA}}</div>
+    <div>Email: {{email}}</div>
+    <div><h4>Classses and Grades</h4></div>
+    <div class="bottom" *ngFor="let class of studentClasses" >Class: {{class.id}} Grade: {{class.grade}}</div>
+  </div>
+</div>

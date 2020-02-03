@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  margin-top: 20px;
+}
+.the-form {
+  width: 5%;
+  background-color: red;
+}
+.inner {
+  width: 50%;
+}
+
+.results {
+  margin-top: 3em;
+  margin-bottom: 1em;
+}

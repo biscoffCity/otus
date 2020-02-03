@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="the-from">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Search Student" [(ngModel)]="searchName" name="searchName">
+    </mat-form-field>
+  </div>
+
+  <div class="button">
+    <button  mat-raised-button (click)="getStudent()">GO</button>
+  </div>
+
+</div>
+
+<div class="results" *ngIf="loadDetails"> 
+  <div><h2>Student Info</h2></div>
+  <div>First Name : {{firstName}}</div>
+  <div>Last Name : {{lastName}}</div>
+  <div>Student GPA : {{studentGPA}}</div>
+</div>
+
+<app-more-details 
+  class="results" *ngIf="loadDetails"
+  [firstName] = "firstName"
+  [lastName] = "lastName"
+  [studentGPA] = "studentGPA"
+  [email] = "email"
+  [studentClasses] = "studentClasses"
+  >
+</app-more-details>
